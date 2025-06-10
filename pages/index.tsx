@@ -1,5 +1,6 @@
 import { PROPERTYLISTINGSAMPLE } from "@/constants";
 import Pill from "@/components/common/Pill";
+import Image from "next/image";
 
 const filters = [
   "Top Villa", "Self Checkin", "Pet Friendly", "Pool", "Luxury", "Fireplace"
@@ -33,7 +34,7 @@ export default function Home() {
             key={index}
             className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition"
           >
-            <img src={property.image} alt={property.name} className="h-48 w-full object-cover" />
+            <Image src={property.image} alt={property.name} className="h-48 w-full object-cover" width={100} height={100} />
             <div className="p-4">
               <h2 className="font-bold text-lg">{property.name}</h2>
               <p className="text-sm text-gray-500">
